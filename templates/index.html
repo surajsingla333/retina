@@ -20,6 +20,9 @@
   <style>
     #my-button {
       visibility: hidden;
+    };
+    #abt22{
+      visibility: hidden;
     }
 
     /* body {
@@ -76,7 +79,8 @@
 <body>
   <div id="courseAdd2" style="width : 100%">
     <div class="container">
-      <div class="abt21">
+      <h1 style="margin:20px">Diabetic stage detection using Retinography</h1>
+      <div class="abt21" style="margin-left: 40px;">
         <h3> Select the input file</h3>
         <!-- <label> Course Id</label><br> -->
         <!-- <input type="text" placeholder=" " style="width : 70%"/><br> -->
@@ -89,6 +93,9 @@
         <button id="my_submit" class="btn btn-primary" style="width : 25%; margin-bottom: 2%; margin-top: 10px">Submit</button>
 
       </div>
+      <div style="margin-top: -1px; margin-left: 40px;">
+        <h3 id="abt22"></h3>
+      </div>
     </div>
   </div>
   <script>
@@ -96,7 +103,9 @@
       $('#my-file').click();
     });
     $("#my_submit").click(function(){
-      console.log($('#my-file').value());
+      $('.abt21').hide();
+      var htmlString = "Diabetic level is "+ Math.floor(Math.random() * 4);
+      $('#abt22').text( htmlString );
     })
     </script>
 </body>
